@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Music Quiz</string>
+    <string name="musical_notes">Musical Notes</string>
+    <string name="musical_instruments">Musical Instruments</string>
+    <string name="choir_voices">Choir Voices</string>
+    <string name="classical_composers">Classical Composers</string>
+    <string name="whole_note_semibreve">Whole note / Semibreve</string>
+    <string name="quarter_note_crotchet">Quarter note / Crotchet</string>
+    <string name="sixteenth_note_semiquaver">Sixteenth note / Semiquaver</string>
+    <string name="notes_question_1">Check the notes you see in the staff</string>
+    <string name="notes_question_2">Which of the following notes have the longest duration?</string>
+    <string name="composers_question_1">Check what\'s true about this composer</string>
+    <string name="submit_answers">Submit answer</string>
+    <string name="composers_answer_1">Was born in Germany</string>
+    <string name="composers_answer_2">Started writing music with 5 years old</string>
+    <string name="composers_answer_3">Wrote Eine Kleine Nachtmusik</string>
+    <string name="composers_answer_4">Wrote Symphony No. 9 in D minor</string>
+    <string name="instruments_question_1">Write the name of this instrument</string>
+    <string name="instrument_answer_1">Enter instrument name</string>
+    <string name="passed">Excellent</string>
+    <string name="notpassed">Try again</string>
+    <string name="testresults">%1$s: %2$s!</string>
+    <string name="voices_question">Check the words that correspond to voice sections of a choir</string>
+    <string name="andantes">Andantes</string>
+    <string name="contraltos">Contraltos</string>
+    <string name="tenors">Tenors</string>
+    <string name="brasses">Brasses</string>
+    <string name="strings">Strings</string>
+    <string name="composers_answer_5">Wrote Serenade No. 10 \"Gran Partita\"</string>
+    <string name="app_title">The Music Quiz</string>
+    <string name="half_note_minim">Half note / minim</string>
+    <string name="eigth_note_quaver">Eighth note / Quaver</string>
+    <string name="scoregood">Congratulations! You\'ve added 1 point to your quiz score</string>
+    <string name="scorenot">Too bad! You\'ve added 0 point to the quiz score, but you can try again!</string>
+    <string name="current_score">Quiz score: %1$d/%2$d</string>
+    <string name="reset_quiz">Reset Quiz</string>
+</resources>

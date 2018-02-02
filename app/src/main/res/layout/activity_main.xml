@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.example.android.musicquiz.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/piano" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="cursive"
+                android:text="@string/app_title"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="45sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/notes"
+            style="@style/QuestionGroupStyle"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_border"
+            android:text="@string/musical_notes" />
+
+        <TextView
+            android:id="@+id/instruments"
+            style="@style/QuestionGroupStyle"
+            android:background="@drawable/custom_border"
+            android:text="@string/musical_instruments" />
+
+        <TextView
+            android:id="@+id/voices"
+            style="@style/QuestionGroupStyle"
+            android:background="@drawable/custom_border"
+            android:text="@string/choir_voices" />
+
+        <TextView
+            android:id="@+id/composers"
+            style="@style/QuestionGroupStyle"
+            android:background="@drawable/custom_border"
+            android:text="@string/classical_composers" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/current_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="restart"
+                android:textColor="@android:color/white"
+                android:text="@string/reset_quiz"
+                android:background="@android:color/holo_red_light"
+                android:layout_marginEnd="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
