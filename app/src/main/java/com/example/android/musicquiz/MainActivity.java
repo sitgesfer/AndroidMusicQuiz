@@ -5,7 +5,6 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
     int score = 0;
     int total = 4;
     int[] scores = {0,0,0,0};
+
+    // Answer keys and results
+    static final String ANSWER1 = "answer1";
+    static final String ANSWER2 = "answer2";
+    static final String CORRECT = "correct";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0; i < total; i++) {
             tempScore += scores[i];
         }
-        Log.i("total", res.getString(R.string.current_score, tempScore, total));
+        score = tempScore;
         TextView currentScore = (TextView) findViewById(R.id.current_score);
         currentScore.setText(res.getString(R.string.current_score, tempScore, total));
     }
@@ -95,26 +99,26 @@ public class MainActivity extends AppCompatActivity {
             currentTest = (TextView) findViewById(R.id.notes);
             currentText = res.getString(R.string.musical_notes);
 
-            if (data.getExtras().getString("answer1").equals("correct") &&
-                    data.getExtras().getString("answer2").equals("correct")) {
+            if (data.getExtras().getString(ANSWER1).equals(CORRECT) &&
+                    data.getExtras().getString(ANSWER2).equals(CORRECT)) {
                 approved = true;
             }
         } else if (requestCode == INSTRUMENTS_REQUEST && resultCode == RESULT_OK) {
             currentTest = (TextView) findViewById(R.id.instruments);
             currentText = res.getString(R.string.musical_instruments);
-            if (data.getExtras().getString("answer1").equals("correct")) {
+            if (data.getExtras().getString(ANSWER1).equals(CORRECT)) {
                 approved = true;
             }
         } else if (requestCode == VOICES_REQUEST && resultCode == RESULT_OK) {
             currentTest = (TextView) findViewById(R.id.voices);
             currentText = res.getString(R.string.choir_voices);
-            if (data.getExtras().getString("answer1").equals("correct")) {
+            if (data.getExtras().getString(ANSWER1).equals(CORRECT)) {
                 approved = true;
             }
         } else if (requestCode == COMPOSERS_REQUEST && resultCode == RESULT_OK) {
             currentTest = (TextView) findViewById(R.id.composers);
             currentText = res.getString(R.string.classical_composers);
-            if (data.getExtras().getString("answer1").equals("correct")) {
+            if (data.getExtras().getString(ANSWER1).equals(CORRECT)) {
                 approved = true;
             }
         }
